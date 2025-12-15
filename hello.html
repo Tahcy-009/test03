@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hello — Links</title>
+  <title>Hello — High‑Res Icons</title>
   <style>
     :root{
       --bg:#e0e0e0;
-      --card:#ffffff;
-      --muted-filter: grayscale(20%) saturate(.4) brightness(.75);
-      --hover-filter: grayscale(10%) saturate(.7) brightness(.95);
-      --size:72px;
-      --gap:18px;
+      --card:#fff;
+      --muted-filter: saturate(.5) brightness(.75);
+      --hover-filter: saturate(.9) brightness(1.02);
+      --size:84px;ㅃㄹ
+      --gap:20px;
     }
     html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
     body{
@@ -24,9 +24,9 @@
       display:flex;
       gap:var(--gap);
       padding:28px;
-      border-radius:12px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.35));
-      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      border-radius:14px;
+      background:rgba(255,255,255,0.45);
+      box-shadow:0 8px 28px rgba(0,0,0,0.08);
       align-items:center;
     }
     .btn{
@@ -36,25 +36,24 @@
       text-decoration:none;
       color:#222;
       width:calc(var(--size) + 28px);
-      padding:10px;
-      border-radius:10px;
+      padding:12px;
+      border-radius:12px;
       background:transparent;
-      transition:transform .14s ease, filter .14s ease, box-shadow .14s ease;
+      transition:transform .16s ease, filter .16s ease, box-shadow .16s ease;
     }
     .btn:hover{ transform:translateY(-6px); }
-    .logo{
+    .icon{
       width:var(--size);
       height:var(--size);
       display:block;
-      object-fit:contain;
       filter:var(--muted-filter);
-      transition:filter .14s ease;
-      border-radius:10px;
+      transition:filter .16s ease, transform .16s ease;
+      border-radius:12px;
       background:var(--card);
-      padding:8px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.06) inset;
+      padding:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.06) inset;
     }
-    .btn:hover .logo{ filter:var(--hover-filter); }
+    .btn:hover .icon{ filter:var(--hover-filter); transform:scale(1.02); }
     .label{
       margin-top:10px;
       font-size:13px;
@@ -69,23 +68,53 @@
 </head>
 <body>
   <div class="wrap" role="navigation" aria-label="quick links">
+    <!-- Google -->
     <a class="btn" href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-      <img class="logo" src="https://www.google.com/favicon.ico" alt="Google 로고">
+      <svg class="icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+        <rect width="48" height="48" rx="8" fill="white"/>
+        <g transform="translate(6,6) scale(0.75)">
+          <path d="M27 22.5c0-.9-.08-1.75-.24-2.58H15.75v4.9h6.44c-.28 1.5-1.05 2.77-2.24 3.63v3.02h3.62c2.12-1.95 3.35-4.82 3.35-8.97z" fill="#4285F4"/>
+          <path d="M15.75 33.5c3.04 0 5.6-1 7.47-2.7l-3.62-3.02c-1 .67-2.27 1.07-3.85 1.07-2.96 0-5.47-2-6.36-4.7H5.68v3.01C7.55 30.9 11.4 33.5 15.75 33.5z" fill="#34A853"/>
+          <path d="M9.39 24.15a8.93 8.93 0 0 1 0-5.3V15.84H5.68a14.99 14.99 0 0 0 0 16.3l3.71-3.99z" fill="#FBBC05"/>
+          <path d="M15.75 16.5c1.66 0 3.15.57 4.32 1.7l3.24-3.24C21.32 13.1 18.76 12 15.75 12 11.4 12 7.55 14.6 5.68 18.84l3.71 3.01c.9-2.7 3.4-4.7 6.36-4.7z" fill="#EA4335"/>
+        </g>
+      </svg>
       <div class="label">Google</div>
     </a>
 
+    <!-- Naver -->
     <a class="btn" href="https://www.naver.com" target="_blank" rel="noopener noreferrer">
-      <img class="logo" src="https://www.naver.com/favicon.ico" alt="Naver 로고">
+      <svg class="icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+        <rect width="48" height="48" rx="8" fill="white"/>
+        <g transform="translate(6,6) scale(0.75)">
+          <rect x="0" y="0" width="36" height="36" rx="6" fill="#03C75A"/>
+          <path d="M9 26V10h4.5l8.5 11V10h4v16h-4.5l-8.5-11V26H9z" fill="white"/>
+        </g>
+      </svg>
       <div class="label">Naver</div>
     </a>
 
+    <!-- YouTube -->
     <a class="btn" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-      <img class="logo" src="https://www.youtube.com/favicon.ico" alt="YouTube 로고">
+      <svg class="icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+        <rect width="48" height="48" rx="8" fill="white"/>
+        <g transform="translate(6,6) scale(0.75)">
+          <rect x="0" y="6" width="36" height="24" rx="6" fill="#FF0000"/>
+          <path d="M14 12l12 6-12 6z" fill="#fff"/>
+        </g>
+      </svg>
       <div class="label">YouTube</div>
     </a>
 
+    <!-- GitHub -->
     <a class="btn" href="https://github.com" target="_blank" rel="noopener noreferrer">
-      <img class="logo" src="https://github.com/favicon.ico" alt="GitHub 로고">
+      <svg class="icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+        <rect width="48" height="48" rx="8" fill="white"/>
+        <g transform="translate(6,6) scale(0.75)">
+          <circle cx="18" cy="18" r="18" fill="#0d1117"/>
+          <path d="M12 30c0-6.6 4.8-9.25 8.4-9.9.6-.1.8.25.8.55v2.2c-3.2.35-4.2 1.95-4.2 3.15 0 2.05 1.15 2.95 2.9 2.95 1.9 0 3.2-1.05 3.2-3.05 0-1.25-.4-1.85-1.35-2.65-.9-.75-1.1-1.25-.75-1.55.55-.4 1.95-.4 3.1.1v-2.2c0-.3.2-.65.8-.55C35.2 20.75 40 23.4 40 30v4H12v-4z" fill="#fff" transform="scale(.7) translate(6,6)"/>
+        </g>
+      </svg>
       <div class="label">GitHub</div>
     </a>
   </div>
